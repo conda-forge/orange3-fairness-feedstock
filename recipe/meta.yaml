@@ -1,5 +1,5 @@
 {% set name = "Orange3-Fairness" %}
-{% set version = "0.1.6" %}
+{% set version = "0.1.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 18f85525bf1a4b1cf6286a92051b6053ad745826311c037cd40482411b95824b
+  sha256: f76a3e47b9e7dce70e3f48db0eb0f25b74519abb5090d7330c0a6c2c7e49d050
 
 build:
   number: 0
