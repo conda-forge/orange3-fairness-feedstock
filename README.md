@@ -150,4 +150,5 @@ Feedstock Maintainers
 * [@HeavyTony2](https://github.com/HeavyTony2/)
 * [@PrimozGodec](https://github.com/PrimozGodec/)
 * [@ZanMervic](https://github.com/ZanMervic/)
+* [@markotoplak](https://github.com/markotoplak/)
 
