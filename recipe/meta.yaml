@@ -1,13 +1,14 @@
 {% set name = "Orange3-Fairness" %}
-{% set version = "0.2.0" %}
+{% set source_name = "orange3_fairness" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 53586b63f0e94d7c6884632a3d8ca179d065e0f17914656210883b6eae6a1156
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ source_name }}-{{ version }}.tar.gz
+  sha256: 684c416d67063ed00e7fc94d8da38621d9a8621169f411624b4375aac76c3612
 
 build:
   number: 0
