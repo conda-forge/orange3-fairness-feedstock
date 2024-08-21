@@ -25,7 +25,7 @@ requirements:
     - aif360 >=0.6.0
     - numpy
     - orange3 >=3.32.0
-    - xgboost <2.1.1
+    - xgboost <2.1.0
     - serverfiles <0.3.0
 
 test:
