@@ -7,21 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ source_name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ source_name }}-{{ version }}.tar.gz
   sha256: e1a12726f3e90d511b48059fe7f2accf71f36c43204ac6ac61cc3b80e26cf8aa
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - aif360 >=0.6.0
     - numpy
     - orange3 >=3.32.0
@@ -33,6 +33,7 @@ test:
     # - pip check temporarily disabled because of issues with the package serverfiles
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://orangedatamining.com/
