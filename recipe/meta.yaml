@@ -20,11 +20,14 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools
+    - wheel
+    - recommonmark
   run:
     - python >={{ python_min }}
     - aif360 >=0.6.0
-    - numpy
+    - numpy >=1.24.0
     - orange3 >=3.32.0
+    - setuptools >=51.0.0
 
 test:
   imports:
