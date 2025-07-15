@@ -1,6 +1,6 @@
 {% set name = "Orange3-Fairness" %}
 {% set source_name = "orange3_fairness" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ source_name }}-{{ version }}.tar.gz
-  sha256: e1a12726f3e90d511b48059fe7f2accf71f36c43204ac6ac61cc3b80e26cf8aa
+  sha256: a843ed3fbc092485e9465f6762a657d8b4f030bbfdb1331f490251fec5051100
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -20,11 +20,14 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools
+    - wheel
+    - recommonmark
   run:
     - python >={{ python_min }}
     - aif360 >=0.6.0
-    - numpy
+    - numpy >=1.24.0
     - orange3 >=3.32.0
+    - setuptools >=51.0.0
 
 test:
   imports:
